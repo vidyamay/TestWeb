@@ -11,15 +11,11 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
             <version>2.3</version>
-             <configuration>
-                   <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
             <executions>
                 <execution>
                     <phase>package</phase>
                     <goals><goal>copy</goal></goals>
                     <configuration>
-                          
                         <artifactItems>
                             <artifactItem>
                                 <groupId>org.mortbay.jetty</groupId>
@@ -35,15 +31,18 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
-       </plugin>
-<plugin>
-        <groupId>com.heroku.sdk</groupId>
-        <artifactId>heroku-maven-plugin</artifactId>
-        <version>0.3.5</version>
-      	<configuration>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
-          <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
-            <failOnMissingWebXml>false</failOnMissingWebXml>
+          
+          <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
     </plugins>
