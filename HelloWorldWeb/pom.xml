@@ -37,16 +37,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
           <target>1.8</target>
         </configuration>
       </plugin>
-  <!--   <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
-          <warSourceDirectory>WebContent</warSourceDirectory>
-          <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
-        </configuration>
-      </plugin> -->
-           
+        
        <plugin>
         <groupId>com.heroku.sdk</groupId>
         <artifactId>heroku-maven-plugin</artifactId>
