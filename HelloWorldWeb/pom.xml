@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>HelloWorldWeb</groupId>
   <artifactId>HelloWorldWeb</artifactId>
@@ -36,14 +37,26 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-      <plugin>
+  <!--   <plugin>
         <artifactId>maven-war-plugin</artifactId>
         <version>2.4</version>
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
+          <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin> -->
+      
+       <plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>0.3.5</version>
+      	<configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+          <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
         </configuration>
       </plugin>
     </plugins>
+    
   </build>
 </project>
