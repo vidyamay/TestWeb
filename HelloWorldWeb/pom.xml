@@ -43,6 +43,7 @@
       	<configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
+           <webxml>WebContent/WEB-INF/web.xml</webxml>
         </configuration>
       </plugin>
     </plugins>
