@@ -16,7 +16,7 @@
                     <phase>package</phase>
                     <goals><goal>copy</goal></goals>
                     <configuration>
-                           <webXml>WebContent/WEB-INF/web.xml</webXml>
+                           <webXml>WebContent\WEB-INF\web.xml</webXml>
                         <artifactItems>
                             <artifactItem>
                                 <groupId>org.mortbay.jetty</groupId>
@@ -33,19 +33,17 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-         <source>1.8</source>
-          <target>1.8</target>
+        <webXml>WebContent\WEB-INF\web.xml</webXml>
         </configuration>
       </plugin>
 <plugin>
         <groupId>com.heroku.sdk</groupId>
         <artifactId>heroku-maven-plugin</artifactId>
         <version>0.3.5</version>
-   
       	<configuration>
+      	  <webXml>WebContent\WEB-INF\web.xml</webXml>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
-        
         </configuration>
       </plugin>
     </plugins>
