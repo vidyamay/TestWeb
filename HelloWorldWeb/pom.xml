@@ -36,12 +36,13 @@
           <target>1.8</target>
         </configuration>
       </plugin>
-      <plugin>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>2.4</version>
-        <configuration>
+<plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>0.3.5</version>
+      	<configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
-          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <warFile>target/HelloWorldWeb-0.0.1-SNAPSHOT.war</warFile>
         </configuration>
       </plugin>
     </plugins>
