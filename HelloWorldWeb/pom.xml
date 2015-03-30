@@ -44,10 +44,10 @@
 				<version>2.4</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
+
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 
 		</plugins>
-	</build>
-</project>
+	</build></project>
